@@ -157,22 +157,29 @@ p {
  outline-style: dashed;
 }
 
-@media (hover: none) {
-    
-    .birthdayCard:hover {
+        .cardInside {
+        position: absolute;
+        background-color: #fff;
+        width: 250px;
+        height: 350px;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+       }
+
+    .birthdayCard {
         transform: perspective(2500px) rotate(5deg);
         box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
        }
        
-       .birthdayCard:hover .cardFront {
+       .birthdayCard .cardFront {
         transform: rotateY(-160deg);
        }
        
-       .birthdayCard:hover .happy {
+       .birthdayCard .happy {
         visibility: hidden;
        }
-    
-}
 
 @keyframes blink {
  0% {
